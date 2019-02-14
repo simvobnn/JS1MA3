@@ -1,13 +1,12 @@
 document.getElementById("submit").addEventListener("click", function(){
-    var inputFields  = document.getElementsByTagName("input");
+    var allInputs  = document.getElementsByTagName("input");
     
-    for(var i = 0; i < inputFields.length; i++){ 
-        var theInput = inputFields[i].value;
-        console.log(theInput);
-        var thePattern = new RegExp(inputFields[i].pattern);
-        var theTest = thePattern.test(theInput);
-        if (theTest === false){
-            console.log(inputFields[i].name + " is not valid");
+    for(var i = 0; i < allInputs.length; i++){ 
+        var userInput = allInputs[i].value;
+        var myPatterns = new RegExp(allInputs[i].pattern);
+        var inputControl = myPatterns.test(userInput);
+        if (inputControl === false){
+            console.log (allInputs[i].name + " is not valid");
         }
     }
 })

@@ -8,11 +8,11 @@
     <form>
         <section>
             <label for="fname">Given name:</label>
-            <input type="text" id="fname" pattern="[a-zA-Z -]" name="Given name">            
+            <input type="text" id="fname" pattern="^[a-zA-Z -]+$" name="Given name">            
         </section>
         <section>
             <label for="lname">Surname:</label>
-            <input type="text" id="lname" pattern="[a-zA-Z]" name="Surname">
+            <input type="text" id="lname" pattern="^[a-zA-Z]+$" name="Surname">
         </section>
         <section>
             <label for="tel">Telephone(NO):</label>
@@ -26,9 +26,6 @@
             <button id="submit" type="submit">Submit!</button>
         </section>
     </form>
-
-
-
 <script src="script.js"></script>
 </body>
 </html>
